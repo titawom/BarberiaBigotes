@@ -2,6 +2,12 @@
 <meta http-equiv="Content-Type"'.' content="text/html; charset=utf8"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
+<style>
+	.titulo {
+		display: flex;
+    	align-items: baseline;
+	}
+</style>
 <body>
 <?php
 require ('connectDB.php');
@@ -63,9 +69,12 @@ session_start();
 if(isset($_SESSION['id'])){
 	echo '<header>';
 	echo '<blockquote>';
+	echo '<div class="titulo">';
 	echo '<a href="index.php"><img src="image/logo.png"></a>';
-	echo '<form class="hf" action="logout.php"><input class="hi" type="submit" name="submitButton" value="Logout"></form>';
+	echo '<form class="hf" action="clientes.php"><input class="hi" type="submit" name="submitButton" value="Clientes"></form>';
 	echo '<form class="hf" action="edituser.php"><input class="hi" type="submit" name="submitButton" value="Edit Profile"></form>';
+	echo '<form class="hf" action="logout.php"><input class="hi" type="submit" name="submitButton" value="Logout"></form>';
+	echo '</div>';
 	echo '</blockquote>';
 	echo '</header>';
 }
@@ -73,9 +82,13 @@ if(isset($_SESSION['id'])){
 if(!isset($_SESSION['id'])){
 	echo '<header>';
 	echo '<blockquote>';
+	echo '<div class="titulo">';
 	echo '<a href="index.php"><img src="image/logo.png"></a>';
-	echo '<form class="hf" action="formulario.html"><input class="hi" type="submit" name="submitButton" value="Register"></form>';
+	echo '<form class="hf" action="dates.php"><input class="hi" type="submit" name="submitButton" value="Pedir Cita"></form>';
+	echo '<form class="hf" action="iot.php"><input class="hi" type="submit" name="submitButton" value="Iot"></form>';
 	echo '<form class="hf" action="login.php"><input class="hi" type="submit" name="submitButton" value="Login"></form>';
+	echo '<form class="hf" action="formulario.html"><input class="hi" type="submit" name="submitButton" value="Register"></form>';
+	echo '</div>';
 	echo '</blockquote>';
 	echo '</header>';
 }
