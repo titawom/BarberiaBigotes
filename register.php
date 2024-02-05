@@ -116,7 +116,7 @@ function test_input($data){
 <body>
 <header>
 <blockquote>
-	<a href="index.php"><img src="image/logo.png"></a>
+	<a href="index.php"><img class="logo" src="image/logo.png"></a>
 </blockquote>
 </header>
 <blockquote>

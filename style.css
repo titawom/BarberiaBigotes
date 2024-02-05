@@ -119,3 +119,7 @@ textarea:focus {
     padding: 20px;
     margin: 0 auto;
 }
+
+.logo {
+    width: 10em;
+}

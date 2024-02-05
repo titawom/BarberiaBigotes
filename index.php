@@ -70,7 +70,7 @@ if(isset($_SESSION['id'])){
 	echo '<header>';
 	echo '<blockquote>';
 	echo '<div class="titulo">';
-	echo '<a href="index.php"><img src="image/logo.png"></a>';
+	echo '<a href="index.php"><img class="logo" src="image/logo.png"></a>';
 	echo '<form class="hf" action="clientes.php"><input class="hi" type="submit" name="submitButton" value="Clientes"></form>';
 	echo '<form class="hf" action="edituser.php"><input class="hi" type="submit" name="submitButton" value="Edit Profile"></form>';
 	echo '<form class="hf" action="logout.php"><input class="hi" type="submit" name="submitButton" value="Logout"></form>';
@@ -83,11 +83,11 @@ if(!isset($_SESSION['id'])){
 	echo '<header>';
 	echo '<blockquote>';
 	echo '<div class="titulo">';
-	echo '<a href="index.php"><img src="image/logo.png"></a>';
+	echo '<a href="index.php"><img class="logo" src="image/logo.png"></a>';
 	echo '<form class="hf" action="dates.php"><input class="hi" type="submit" name="submitButton" value="Pedir Cita"></form>';
 	echo '<form class="hf" action="iot.php"><input class="hi" type="submit" name="submitButton" value="Iot"></form>';
 	echo '<form class="hf" action="login.php"><input class="hi" type="submit" name="submitButton" value="Login"></form>';
-	echo '<form class="hf" action="formulario.html"><input class="hi" type="submit" name="submitButton" value="Register"></form>';
+	echo '<form class="hf" action="register.php"><input class="hi" type="submit" name="submitButton" value="Register"></form>';
 	echo '</div>';
 	echo '</blockquote>';
 	echo '</header>';
@@ -98,7 +98,7 @@ echo '<blockquote>';
     while($row = $result->fetch_assoc()) {
 	    echo "<td>";
 	    echo "<table>";
-	   	echo '<tr><td>'.'<img src="'.$row["Image"].'"width="80%">'.'</td></tr><tr><td style="padding: 5px;">Title: '.$row["BookTitle"].'</td></tr><tr><td style="padding: 5px;">ISBN: '.$row["ISBN"].'</td></tr><tr><td style="padding: 5px;">Author: '.$row["Author"].'</td></tr><tr><td style="padding: 5px;">Type: '.$row["Type"].'</td></tr><tr><td style="padding: 5px;">RM'.$row["Price"].'</td></tr><tr><td style="padding: 5px;">
+	   	echo '<tr><td>'.'<img src="'.$row["Image"].'"width="80%">'.'</td></tr><tr><td style="padding: 5px;">Título: '.$row["BookTitle"].'</td></tr><tr><td style="padding: 5px;">Tipo: '.$row["Type"].'</td></tr><tr><td style="padding: 5px;">'.$row["Price"].' €</td></tr><tr><td style="padding: 5px;">
 	   	<form action="" method="post">
 	   	Quantity: <input type="number" value="1" name="quantity" style="width: 20%"/><br>
 	   	<input type="hidden" value="'.$row['BookID'].'" name="ac"/>
@@ -119,13 +119,13 @@ echo '<blockquote>';
     while($row = $result->fetch_assoc()){
     	echo "<tr><td>";
     	echo '<img src="'.$row["Image"].'"width="20%"><br>';
-    	echo $row['BookTitle']."<br>RM".$row['Price']."<br>";
+    	echo $row['BookTitle']."<br>".$row['Price']." €<br>";
     	echo "Quantity: ".$row['Quantity']."<br>";
-    	echo "Total Price: RM".$row['TotalPrice']."</td></tr>";
+    	echo "Total Price: ".$row['TotalPrice']." €</td></tr>";
     	$total += $row['TotalPrice'];
     }
     echo "<tr><td style='text-align: right;background-color: #f2f2f2;''>";
-    echo "Total: <b>RM".$total."</b><center><form action='checkout.php' method='post'><input class='button' type='submit' name='checkout' value='CHECKOUT'></form></center>";
+    echo "Total: <b>".$total." €</b><center><form action='checkout.php' method='post'><input class='button' type='submit' name='checkout' value='CHECKOUT'></form></center>";
     echo "</td></tr>";
 	echo "</table>";
 	echo '</blockquote>';
