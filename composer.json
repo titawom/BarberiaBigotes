@@ -1,0 +1,17 @@
+{
+    "name": "vant/barberia-bigotes",
+    "autoload": {
+        "psr-4": {
+            "Vant\\BarberiaBigotes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "titawom",
+            "email": "titawom@gmail.com"
+        }
+    ],
+    "require": {
+        "aws/aws-sdk-php": "^3.298"
+    }
+}
