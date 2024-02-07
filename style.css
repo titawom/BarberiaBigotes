@@ -4,7 +4,8 @@ body{
 }
 
 header {
-    background-color: rgb(0,51,102);
+    background-image: url('image/backgrouBarberia.jpg');
+    background-size: 100%;
     width: 100%;
 }
 header img {
@@ -15,14 +16,14 @@ header .hf{
     margin: 1.5%;
 }
 header .hi{
-    background-color: #fff;
+    background-color: #0047ff;;
     border: none;
     border-radius: 20px;
     text-align: center;
     transition-duration: 0.5s; 
     padding: 8px 30px;
     cursor: pointer;
-    color: #000;
+    color: #ffffff;
     font-weight: bold;
     margin-top: 15%;
 }
