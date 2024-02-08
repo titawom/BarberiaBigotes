@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </style>
 </head>
 <body>
-    <h2 class="titulo">Solicitud de Cita Médica</h2>
+    <h2 class="titulo">Solicitud de Cita Previa</h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <label for="fullname">Nombre Completo:</label>
         <input type="text" id="fullname" name="fullname" required>
