@@ -15,7 +15,7 @@ $dynamoDb = new DynamoDbClient([
 ]); */
 
 $servername = "localhost";
-$username = "root";
-$password = "root";
+$username = "ubuntu";
+$password = "ubuntu";
 
 $pdo=new PDO("mysql:host=$servername;port=3306;dbname=BookStore",$username, $password);
