@@ -1,6 +1,6 @@
 <?php
 
-use Aws\DynamoDb\DynamoDbClient;
+//use Aws\DynamoDb\DynamoDbClient;
 
 /*$credentials = new Aws\Credentials\Credentials('your-access-key-id', 'your-secret-access-key');
 
