@@ -57,7 +57,7 @@ CREATE TABLE Cart(
     CONSTRAINT FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
-CREATE TABLE `BookStore`.`Dates` ( `id` INT NOT NULL AUTO_INCREMENT , `fullname` VARCHAR(50) NOT NULL , `email` VARCHAR(50) NOT NULL , `phone` VARCHAR(50) NOT NULL , `date` VARCHAR(50) NOT NULL , `reason` VARCHAR(50) NOT NULL , PRIMARY KEY (`id`))
+CREATE TABLE `BookStore`.`Dates` ( `id` INT NOT NULL AUTO_INCREMENT , `fullname` VARCHAR(50) NOT NULL , `email` VARCHAR(50) NOT NULL , `phone` VARCHAR(50) NOT NULL , `date` VARCHAR(50) NOT NULL , `reason` VARCHAR(50) NOT NULL , PRIMARY KEY (`id`));
 
 
 INSERT INTO `Book`(`BookID`, `BookTitle`, `ISBN`, `Price`, `Author`, `Type`, `Image`) VALUES ('B-001','Champú','123-456-789-1',12.32,'Autor','Producto','image/champu.jpg');
