@@ -11,13 +11,13 @@ foreach ($result as $item) {
         if (isset($i['location'])) {    
             if ($locationIteration != $i['location']['S']) {
                 $locationIteration = $i['location']['S'];
-                $timestamps[$i['location']['S']][] = $i['timestamp']['N'];
+                $timestamps[$i['location']['S']][] = date('H:mm:ss', $i['timestamp']['N']);
                 $temperatura[$i['location']['S']][] = $i['temperature']['N'];
                 $airQualityData[$i['location']['S']][] = $i['air_quality']['N'];
                 $locations[] = $locationIteration;
 
             } else {
-                $timestamps[$i['location']['S']][] = $i['timestamp']['N'];
+                $timestamps[$i['location']['S']][] = date('H:mm:ss', $i['timestamp']['N']);
                 $temperatura[$i['location']['S']][] = $i['temperature']['N'];
                 $airQualityData[$i['location']['S']][] = $i['air_quality']['N'];
             }
