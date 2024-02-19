@@ -72,7 +72,7 @@ if(isset($_SESSION['id'])){
 	echo '<div class="titulo">';
 	echo '<a href="index.php"><img class="logo" src="image/logo.png"></a>';
 	echo '<form class="hf" action="clientes.php"><input class="hi" type="submit" name="submitButton" value="Clientes"></form>';
-	echo '<form class="hf" action="http://44.217.58.7:8069/web/login"><input class="hi" type="submit" name="submitButton" value="Administración"></form>';
+	echo '<form class="hf" action="http://3.230.34.142:8069/web/login"><input class="hi" type="submit" name="submitButton" value="Administración"></form>';
 	echo '<form class="hf" action="edituser.php"><input class="hi" type="submit" name="submitButton" value="Edit Profile"></form>';
 	echo '<form class="hf" action="logout.php"><input class="hi" type="submit" name="submitButton" value="Logout"></form>';
 	echo '</div>';
